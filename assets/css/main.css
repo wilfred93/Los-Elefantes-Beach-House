@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'katibeh';
+        src: url('/fonts/katibeh-regular.woff2') format('woff2'),
+             url('/fonts/katibeh-regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'montserrat-regular';
+        src: url('/fonts/montserrat-regular.woff2') format('woff2'),
+             url('/fonts/montserrat-regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+    .gloria-hallelujah-regular {
+        font-family: "Gloria Hallelujah", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+    body {
+        @apply font-montserrat-regular;
+    }
+
+    .unit-images-wrapper {
+        width: calc(50% + 50vw + 1.1rem);
+        margin-left: 100%;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    .arrow-background {
+        left: calc((100% - 960px) / 2)
+    }
+
+    @media (max-width: 1024px) {
+        .arrow-background {
+            left: calc((100% - 768px) / 2)
+        }
+    }
+
+
+}
+
+@layer components {
+    .primary--title {
+        @apply text-4xl text-center font-katibeh text-elefantes-orange my-8 md:text-6xl md:mt-20
+    }
+}
