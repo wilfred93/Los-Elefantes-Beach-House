@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Path</title>
+    <style>
+        .path-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .animated-path {
+            stroke-dasharray: 10 5;
+            stroke: #FD0A0A;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dashoffset: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="path-container">
+        <svg width="212" height="244" viewBox="0 0 212 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="animated-path" d="M1.76991 2L13.2699 8.49999L24.7699 15.5L35.7699 24.5V24.5C41.5353 29.3551 43.8602 37.1744 41.6838 44.3907L37.0477 59.7631C36.2004 62.5725 35.7699 65.491 35.7699 68.4254L35.7699 109.31C35.7699 114.577 33.793 119.653 30.2303 123.532V123.532C21.3841 133.164 23.3845 148.45 34.4115 155.482L45.9352 162.83C47.1567 163.609 48.4331 164.298 49.7542 164.893L61.0115 169.959C65.2426 171.863 68.2696 175.748 69.0996 180.313V180.313C70.1088 185.864 74.3511 190.296 79.8584 191.52L81.2436 191.827C83.2113 192.265 85.2667 192.073 87.1194 191.279V191.279C89.7488 190.152 92.7432 190.254 95.2899 191.557L105.715 196.891C110.339 199.256 114.269 202.782 117.122 207.123L122.469 215.26C123.666 217.081 125.058 218.767 126.62 220.286L141.815 235.071C142.449 235.687 142.996 236.387 143.441 237.151V237.151C145.193 240.154 148.407 242 151.884 242L210.27 242"/>
+        </svg>
+    </div>
+
+    <script>
+        const path = document.querySelector('.animated-path');
+        const pathLength = path.getTotalLength();
+        
+        // Set initial stroke-dasharray and stroke-dashoffset
+        path.style.strokeDasharray = '10 5';
+        path.style.strokeDashoffset = pathLength;
+
+        // Animate the path
+        function animatePath() {
+            path.style.strokeDashoffset = '0';
+        }
+
+        // Start animation when page loads
+        window.addEventListener('load', () => {
+            path.style.transition = 'stroke-dashoffset 3s ease';
+            animatePath();
+        });
+    </script>
+</body>
+</html> 

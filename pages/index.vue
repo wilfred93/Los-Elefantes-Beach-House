@@ -7,6 +7,7 @@
   import Newsletter from '~/components/pages/home/Newsletter.vue';
   import LocalGuide from '~/components/pages/home/LocalGuide.vue';
   import Footer from '~/components/pages/home/Footer.vue';
+  import Intro from '~/components/pages/home/Intro.vue';
 
   import 'swiper/css';
 	useHead({
@@ -90,35 +91,7 @@
       <p class="text-lg">Maspalomas</p>
     </div>
     </header>
-    <!-- Intro -->
-    <section class="container mx-auto px-5">
-        <h1 class="primary--title">Your tropical oasis in the heart of Playa del Inglés</h1>
-        <div class="flex flex-wrap">
-          <div class="hidden md:flex items-center justify-center w-full md:w-1/2  ">
-            <img class="max-h-[90%]" src="/images/GC-island.png" alt="Gran Canaria Island">
-          </div>
-          <div class="border w-full md:mt-0 md:w-1/2 relative">      
-            <picture>
-                <img class="w-full rounded-xl border-2 border-elefantes-orange" src="/images/map-playa-de-ingles.png" alt="Los Elefantes Beach House">
-            </picture>
-            <p class="my-6">Playa del Inglés Beach is <span class="text-elefantes-orange">200 meters</span> away from Los Elefantes Beach House</p>
-            <div>
-              <div class="overflow-x-auto md:overflow-x-auto whitespace-nowrap md:whitespace-normal -ml-1">
-                <!-- <div class="absolute right-0 -bottom-[22px] md:hidden">
-                  <img src="/images/arrow-right-small.svg" alt="scroll-right">
-                </div> -->
-                <button class="border-2 border-elefantes-orange py-1.5 px-2.5 rounded-full text-xs m-1 md:m-1 inline-block"> Playa del Ingles Beach</button>
-                <button class="border-2 border-elefantes-orange py-1.5 px-2.5 rounded-full text-xs m-1 inline-block"> Yumbo Center</button>
-                <button class="border-2 border-elefantes-orange py-1.5 px-2.5 rounded-full text-xs m-1 inline-block"> Las Burras Beach</button>
-                <button class="border-2 border-elefantes-orange py-1.5 px-2.5 rounded-full text-xs m-1 inline-block"> Faro Maspalomas</button>
-                <button class="border-2 border-elefantes-orange py-1.5 px-2.5 rounded-full text-xs m-1 inline-block"> Faro Maspalomas</button>
-                <button class="border-2 border-elefantes-orange py-1.5 px-2.5 rounded-full text-xs m-1 inline-block"> Faro Maspalomas</button>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-    <!-- Swiper Carousel-->
+    <Intro />
     <PhotosSlideshow />
     <AmenitiesAndTestimonies />
     <Workation />
