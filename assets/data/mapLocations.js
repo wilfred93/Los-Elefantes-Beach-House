@@ -9,6 +9,8 @@ export const locationPaths = [
     endCoordinate:
       "M347 280.6C347 275.305 351.26 271 356.5 271C361.74 271 366 275.305 366 280.6C366 285.482 362.363 289.48 357.688 290.08V307H355.313V290.08C350.637 289.48 347 285.482 347 280.6H347Z",
     mapImg: "/images/maps/playa-del-ingles-beach.png",
+    distance: "400 meters",
+    walkingTime: "4 minutes",
   },
   {
     id: 2,
@@ -20,6 +22,8 @@ export const locationPaths = [
     endCoordinate:
       "M325 209.6C325 204.305 329.26 200 334.5 200C339.74 200 344 204.305 344 209.6C344 214.482 340.363 218.48 335.688 219.08V236H333.313V219.08C328.637 218.48 325 214.482 325 209.6H325Z",
     mapImg: "/images/maps/veril-beach.png",
+    distance: "950 meters",
+    walkingTime: "12 minutes",
   },
   {
     id: 3,
@@ -31,6 +35,8 @@ export const locationPaths = [
     endCoordinate:
       "M45 123.6C45 118.305 49.2601 114 54.5 114C59.7399 114 64 118.305 64 123.6C64 128.482 60.3633 132.48 55.6875 133.08V150H53.3125V133.08C48.6368 132.48 45 128.482 45 123.6H45Z",
     mapImg: "/images/maps/yumbo2.png",
+    distance: "800 meters",
+    walkingTime: "10 minutes",
   },
   {
     id: 4,
@@ -42,5 +48,7 @@ export const locationPaths = [
     endCoordinate:
       "M154 15.6C154 10.305 158.26 6 163.5 6C168.74 6 173 10.305 173 15.6C173 20.4825 169.363 24.48 164.688 25.08V42H162.313V25.08C157.637 24.48 154 20.4825 154 15.6H154Z",
     mapImg: "/images/maps/cita.png",
+    distance: "1.2km",
+    walkingTime: "17 minutes",
   },
 ];

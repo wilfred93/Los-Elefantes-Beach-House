@@ -43,10 +43,13 @@
         />
       </picture>
     </div>
-    <p class="my-6">
-      Playa del Inglés Beach is
-      <span class="text-elefantes-orange">200 meters</span> away from Los
-      Elefantes Beach House
+    <p class="my-6 text-elefantes-green font-bold">
+      {{ locations[selectedLocation].name }} is:
+      <span class="text-elefantes-orange">
+        {{ locations[selectedLocation].distance }} |
+        {{ locations[selectedLocation].walkingTime }}
+      </span>
+      from the apartment
     </p>
     <div>
       <div
