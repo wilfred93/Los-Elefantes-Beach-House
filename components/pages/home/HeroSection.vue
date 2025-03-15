@@ -140,7 +140,7 @@ onMounted(() => {
       />
     </div>
     <div
-      class="absolute mt-12 top-0 md:top-auto md:bottom-0 right-0 mb-12 mr-8 md:mr-12 text-elefantes-yellow text-right z-10"
+      class="absolute mt-12 top-0 md:top-auto md:bottom-0 right-0 mb-3.5 mr-8 md:mr-12 text-elefantes-yellow text-right z-10"
     >
       <Temperature />
     </div>

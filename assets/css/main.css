@@ -54,7 +54,4 @@
 }
 
 @layer components {
-    .primary--title {
-        @apply text-4xl text-center font-katibeh text-elefantes-orange my-8 md:text-6xl md:mt-20
-    }
-}
+    .primary--title {        @apply text-4xl text-center font-katibeh text-elefantes-orange my-8 md:text-6xl md:mt-20    }}
