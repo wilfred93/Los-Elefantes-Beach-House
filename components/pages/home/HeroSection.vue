@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
+import Temperature from "~/components/pages/home/Temperature.vue";
 
 onMounted(() => {
   const menuBtn = document.getElementById("menuBtn");
@@ -52,33 +53,33 @@ onMounted(() => {
       id="menuOverlay"
       class="fixed inset-0 bg-elefantes-green -translate-x-full transition-transform duration-500 ease-in-out z-40 flex items-center justify-center !transition-none"
     >
-      <nav class="text-center">
-        <ul class="space-y-8">
+      <nav class="text-center font-katibeh text-5xl">
+        <ul class="space-y-4">
           <li>
             <a
               href="#"
-              class="text-4xl text-elefantes-yellow hover:text-elefantes-orange transition-colors"
+              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
               >Home</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="text-4xl text-elefantes-yellow hover:text-elefantes-orange transition-colors"
+              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
               >About</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="text-4xl text-elefantes-yellow hover:text-elefantes-orange transition-colors"
+              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
               >Gallery</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="text-4xl text-elefantes-yellow hover:text-elefantes-orange transition-colors"
+              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
               >Contact</a
             >
           </li>
@@ -141,8 +142,7 @@ onMounted(() => {
     <div
       class="absolute mt-12 top-0 md:top-auto md:bottom-0 right-0 mb-12 mr-8 md:mr-12 text-elefantes-yellow text-right z-10"
     >
-      <p class="text-4xl font-bold mb-1">27°C</p>
-      <p class="text-lg">Maspalomas</p>
+      <Temperature />
     </div>
   </header>
 </template>
