@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import Temperature from "~/components/pages/home/Temperature.vue";
+import LanguageSelector from "~/components/shared/LanguageSelector.vue";
 
 onMounted(() => {
   const menuBtn = document.getElementById("menuBtn");
@@ -115,18 +116,7 @@ onMounted(() => {
       </button>
     </div>
     <div class="absolute top-0 left-0 mt-16 pl-8 md:pl-12">
-      <ul class="mt-8 hidden md:block">
-        <li
-          class="leading-5 h-11 w-11 p-[11px] mb-5 rounded-full border border-elefantes-yellow text-elefantes-yellow"
-        >
-          DE
-        </li>
-        <li
-          class="leading-5 h-11 w-11 p-[11px] mb-5 rounded-full border border-elefantes-yellow text-elefantes-yellow"
-        >
-          AT
-        </li>
-      </ul>
+      <LanguageSelector />
     </div>
     <div class="absolute bottom-0 left-0 w-full md:pl-12 text-elefantes-yellow">
       <p class="montserrat-light text-center md:text-left">
