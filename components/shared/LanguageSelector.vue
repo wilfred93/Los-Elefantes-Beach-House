@@ -8,7 +8,15 @@ const selectLanguage = (code) => {
 </script>
 
 <template>
-  <ul class="mt-8 hidden md:block">
+  <!-- <p class="text-elefantes-yellow">
+    Languages
+    <img
+      class="h-5 w-5 inline-block"
+      src="@/assets/icons/layout/triangle-down.svg"
+      alt="Languages"
+    />
+  </p> -->
+  <ul class="hidden md:block">
     <li
       v-for="country in countries"
       :key="country.code"

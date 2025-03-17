@@ -115,7 +115,7 @@ onMounted(() => {
         Click Me
       </button>
     </div>
-    <div class="absolute top-0 left-0 mt-16 pl-8 md:pl-12">
+    <div class="absolute top-8 right-8 pl-8 md:pl-12">
       <LanguageSelector />
     </div>
     <div class="absolute bottom-0 left-0 w-full md:pl-12 text-elefantes-yellow">
