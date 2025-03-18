@@ -1,22 +1,17 @@
 export const countries = [
   {
-    code: "DE",
-    flagClass: "hover:bg-[url('@/assets/icons/countries/de.svg')]",
+    code: "de",
   },
   {
-    code: "FR",
-    flagClass: "hover:bg-[url('@/assets/icons/countries/fr.svg')]",
+    code: "de",
   },
   {
-    code: "IT",
-    flagClass: "hover:bg-[url('@/assets/icons/countries/it.svg')]",
+    code: "it",
   },
   {
-    code: "ES",
-    flagClass: "hover:bg-[url('@/assets/icons/countries/es.svg')]",
+    code: "es",
   },
   {
-    code: "UK",
-    flagClass: "hover:bg-[url('@/assets/icons/countries/uk.svg')]",
+    code: "uk",
   },
 ];
