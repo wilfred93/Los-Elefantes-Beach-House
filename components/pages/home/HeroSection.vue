@@ -119,10 +119,10 @@ onMounted(() => {
       <LanguageSelector />
     </div>
     <div class="absolute bottom-0 left-0 w-full md:pl-12 text-elefantes-yellow">
-      <p class="montserrat-light text-center md:text-left">
-        Sun, Sand & Serenity <br />
-        Awaits You
-      </p>
+      <p
+        class="montserrat-light text-center md:text-left"
+        v-html="$t('arrow_claim')"
+      ></p>
       <img
         class="hidden md:block mb-9"
         src="/images/arrow-right.svg"
