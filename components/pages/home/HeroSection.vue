@@ -60,28 +60,28 @@ onMounted(() => {
             <a
               href="#"
               class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >Home</a
+              >{{ $t("nav_home") }}</a
             >
           </li>
           <li>
             <a
               href="#"
               class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >About</a
+              >{{ $t("nav_bookings") }}</a
             >
           </li>
           <li>
             <a
               href="#"
               class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >Gallery</a
+              >{{ $t("nav_property") }}</a
             >
           </li>
           <li>
             <a
               href="#"
               class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >Contact</a
+              >{{ $t("nav_contact") }}</a
             >
           </li>
         </ul>
@@ -112,7 +112,7 @@ onMounted(() => {
       <button
         class="bg-blue-500 hover:bg-blue-700 text-elefantes-yellow font-bold py-2 px-4 rounded z-10"
       >
-        Click Me
+        Check Availability Now
       </button>
     </div>
     <div class="absolute top-8 right-20 pl-8 md:pl-12">

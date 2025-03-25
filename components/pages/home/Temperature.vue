@@ -4,7 +4,7 @@
     <p class="text-lg">Maspalomas</p>
     <p class="text-sm update-info">
       Last Updated: {{ lastUpdated }} | Conditions:
-      {{ weatherCodes[weatherCode] }}
+      {{ $t("weather_" + weatherCode) }}
     </p>
   </div>
 </template>
