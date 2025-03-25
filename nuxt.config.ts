@@ -32,5 +32,6 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     lazy: true, // Enables lazy loading of language files
     strategy: "prefix_except_default", // Adds "/es" for Spanish but no prefix for English
+    detectBrowserLanguage: false,
   },
 });
