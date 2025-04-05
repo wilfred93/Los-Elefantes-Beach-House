@@ -20,15 +20,22 @@ export default defineNuxtConfig({
         code: "es",
         iso: "es-ES",
         dir: "ltr",
-        files: ["es/home.json", "es/common.json"],
+        files: ["es/home.json", "es/common.json", "es/welcome.json"],
       },
       {
         code: "en",
         iso: "en-US",
         dir: "ltr",
-        files: ["en/home.json", "en/common.json"],
+        files: ["en/home.json", "en/common.json", "en/welcome.json"],
       },
     ],
+    customRoutes: "config",
+    pages: {
+      welcome: {
+        en: "/welcome/",
+        es: "/bienvenido/",
+      },
+    },
     defaultLocale: "en",
     lazy: true, // Enables lazy loading of language files
     strategy: "prefix_except_default", // Adds "/es" for Spanish but no prefix for English

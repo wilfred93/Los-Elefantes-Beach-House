@@ -23,6 +23,15 @@
     font-style: normal;
     font-display: swap;
   }
+  @font-face {
+    font-family: "montserrat-semiBold";
+    src:
+      url("assets/fonts/montserrat-semiBold.woff2") format("woff2"),
+      url("assets/fonts/montserrat-semiBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
   .gloria-hallelujah-regular {
     font-family: "Gloria Hallelujah", serif;

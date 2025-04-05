@@ -20,10 +20,7 @@
 
       {{ title }}
     </button>
-    <div
-      v-show="isOpen"
-      class="bg-elefantes-green text-white pb-3 px-3 rounded-b-md"
-    >
+    <div v-show="isOpen" class="bg-elefantes-green text-white p-4 rounded-b-md">
       <slot></slot>
     </div>
   </div>

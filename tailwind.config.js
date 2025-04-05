@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         katibeh: ["katibeh", "sans-serif"],
         "montserrat-regular": ["montserrat-regular", "sans-serif"],
+        "montserrat-semiBold": ["montserrat-semiBold", "sans-serif"],
       },
       colors: {
         "elefantes-yellow": "#F3EBCB",
