@@ -6,6 +6,7 @@
       alt="Los Elefantes - Logo"
     />
     <div class="max-w-screen-lg mx-auto">
+      <LanguageSwitcher />
       <!-- Address Section -->
       <Collapsable :title="$t('address_title')">
         <p>{{ $t("address_intro") }}</p>
@@ -144,6 +145,7 @@
 <script setup lang="ts">
 import Collapsable from "../components/shared/Collapsable.vue";
 import { useHead } from "#imports";
+import LanguageSwitcher from "../components/shared/LanguageSwitcher.vue";
 
 useHead({
   bodyAttrs: {
