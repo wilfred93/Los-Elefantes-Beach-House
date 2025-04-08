@@ -20,13 +20,23 @@ export default defineNuxtConfig({
         code: "es",
         iso: "es-ES",
         dir: "ltr",
-        files: ["es/home.json", "es/common.json", "es/welcome.json"],
+        files: [
+          "es/home.json",
+          "es/common.json",
+          "es/welcome.json",
+          "es/contact.json",
+        ],
       },
       {
         code: "en",
         iso: "en-US",
         dir: "ltr",
-        files: ["en/home.json", "en/common.json", "en/welcome.json"],
+        files: [
+          "en/home.json",
+          "en/common.json",
+          "en/welcome.json",
+          "en/contact.json",
+        ],
       },
     ],
     customRoutes: "config",
@@ -34,6 +44,10 @@ export default defineNuxtConfig({
       welcome: {
         en: "/welcome/",
         es: "/bienvenido/",
+      },
+      contact: {
+        en: "/contact/",
+        es: "/contacto/",
       },
     },
     defaultLocale: "en",
