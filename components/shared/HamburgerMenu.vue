@@ -30,6 +30,12 @@ onMounted(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
   });
 });
+
+const localePath = useLocalePath();
+const navigationItems = [
+  { page: "welcome", slugKey: "slug_welcome" },
+  { page: "contact", slugKey: "slug_contact" },
+];
 </script>
 
 <template>
@@ -53,33 +59,13 @@ onMounted(() => {
   >
     <nav class="text-center font-katibeh text-5xl">
       <ul class="space-y-4">
-        <li>
-          <a
-            href="#"
+        <li v-for="item in navigationItems">
+          <NuxtLink
+            :to="localePath(item.page)"
             class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-            >{{ $t("nav_home") }}</a
           >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-            >{{ $t("nav_bookings") }}</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-            >{{ $t("nav_property") }}</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-            >{{ $t("nav_contact") }}</a
-          >
+            {{ $t(item.slugKey) }}
+          </NuxtLink>
         </li>
       </ul>
     </nav>

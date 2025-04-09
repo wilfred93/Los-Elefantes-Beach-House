@@ -25,6 +25,7 @@ export default defineNuxtConfig({
           "es/common.json",
           "es/welcome.json",
           "es/contact.json",
+          "es/pagesSlugs.json",
         ],
       },
       {
@@ -36,6 +37,7 @@ export default defineNuxtConfig({
           "en/common.json",
           "en/welcome.json",
           "en/contact.json",
+          "en/pagesSlugs.json",
         ],
       },
     ],
