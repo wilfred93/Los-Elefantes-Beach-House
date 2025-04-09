@@ -2,6 +2,7 @@
 import { onMounted } from "vue";
 import Temperature from "~/components/pages/home/Temperature.vue";
 import LanguageSelector from "~/components/shared/LanguageSelector.vue";
+import HamburgerMenu from "~/components/shared/HamburgerMenu.vue";
 
 onMounted(() => {
   const menuBtn = document.getElementById("menuBtn");
@@ -36,57 +37,7 @@ onMounted(() => {
 
 <template>
   <header class="relative h-screen">
-    <button
-      id="menuBtn"
-      class="absolute top-8 left-12 z-50 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
-    >
-      <span
-        class="w-8 h-0.5 bg-elefantes-yellow transition-all duration-300"
-      ></span>
-      <span
-        class="w-8 h-0.5 bg-elefantes-yellow transition-all duration-300"
-      ></span>
-      <span
-        class="w-8 h-0.5 bg-elefantes-yellow transition-all duration-300"
-      ></span>
-    </button>
-    <div
-      id="menuOverlay"
-      class="fixed inset-0 bg-elefantes-green -translate-x-full transition-transform duration-500 ease-in-out z-40 flex items-center justify-center !transition-none"
-    >
-      <nav class="text-center font-katibeh text-5xl">
-        <ul class="space-y-4">
-          <li>
-            <a
-              href="#"
-              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >{{ $t("nav_home") }}</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >{{ $t("nav_bookings") }}</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >{{ $t("nav_property") }}</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-elefantes-yellow hover:text-elefantes-orange transition-colors"
-              >{{ $t("nav_contact") }}</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <HamburgerMenu />
     <picture class="absolute inset-0 w-full h-full z-0">
       <source
         srcset="/images/maspalomas-dunes-bg.jpg"
