@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
+import LanguageSwitcher from "@/components/shared/LanguageSwitcher.vue";
 import Temperature from "~/components/pages/home/Temperature.vue";
-import LanguageSelector from "~/components/shared/LanguageSelector.vue";
 import HamburgerMenu from "~/components/shared/HamburgerMenu.vue";
 
 onMounted(() => {
@@ -67,7 +67,7 @@ onMounted(() => {
       </button>
     </div>
     <div class="absolute top-8 right-20 pl-8 md:pl-12">
-      <LanguageSelector />
+      <LanguageSwitcher />
     </div>
     <div class="absolute bottom-0 left-0 w-full md:pl-12 text-elefantes-yellow">
       <p
