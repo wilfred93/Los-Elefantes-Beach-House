@@ -1,10 +1,7 @@
 <script setup>
-import { countries } from "@/assets/data/languages";
+const { locales, locale: currentLocale } = useI18n();
 // Add functionality for language selection if needed
-const selectLanguage = (code) => {
-  console.log(`Selected language: ${code}`);
-  // Implement language switching logic here
-};
+console.log(locales);
 </script>
 
 <template>

@@ -11,6 +11,10 @@ import Intro from "~/components/pages/home/Intro.vue";
 import HeroSection from "~/components/pages/home/HeroSection.vue";
 
 import "swiper/css";
+definePageMeta({
+  layout: false,
+});
+
 useHead({
   bodyAttrs: {
     class: "bg-elefantes-yellow",

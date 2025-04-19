@@ -27,6 +27,7 @@ export default defineNuxtConfig({
           "es/contact.json",
           "es/pagesSlugs.json",
         ],
+        name: "Español",
       },
       {
         code: "en",
@@ -39,6 +40,7 @@ export default defineNuxtConfig({
           "en/contact.json",
           "en/pagesSlugs.json",
         ],
+        name: "English",
       },
     ],
     customRoutes: "config",
