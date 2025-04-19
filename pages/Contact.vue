@@ -55,6 +55,9 @@ import Collapsable from "../components/shared/Collapsable.vue";
 import { useHead } from "#imports";
 import LanguageSwitcher from "../components/shared/LanguageSwitcher.vue";
 
+definePageMeta({
+  headerTheme: "dark",
+});
 useHead({
   title: "Contact - Los Elefantes", // Consider localizing this too if needed
   bodyAttrs: {
