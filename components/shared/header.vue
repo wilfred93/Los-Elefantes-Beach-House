@@ -8,7 +8,7 @@
         <HamburgerMenu :theme="theme" />
       </div>
       <div class="flex flex-1 justify-end">
-        <LanguageSwitcher />
+        <LanguageSwitcher :theme="theme" />
       </div>
     </nav>
   </header>
@@ -23,6 +23,4 @@ defineProps({
     default: "light",
   },
 });
-
-const isOpen = ref(false);
 </script>
