@@ -62,6 +62,10 @@ export default defineNuxtConfig({
         en: "/reservations/",
         es: "/reservas/",
       },
+      theHouse: {
+        en: "/the-house/",
+        es: "/la-casa/",
+      },
     },
     defaultLocale: "en",
     lazy: true, // Enables lazy loading of language files
