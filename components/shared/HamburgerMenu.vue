@@ -100,7 +100,8 @@ onMounted(() => {
 const localePath = useLocalePath();
 const navigationItems = [
   { page: "index", slugKey: "slug_home" },
-  { page: "welcome", slugKey: "slug_welcome" },
+  { page: "reservation", slugKey: "slug_reservation" },
   { page: "contact", slugKey: "slug_contact" },
+  { page: "welcome", slugKey: "slug_welcome" },
 ];
 </script>

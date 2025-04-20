@@ -58,6 +58,10 @@ export default defineNuxtConfig({
         en: "/contact/",
         es: "/contacto/",
       },
+      reservation: {
+        en: "/reservations/",
+        es: "/reservas/",
+      },
     },
     defaultLocale: "en",
     lazy: true, // Enables lazy loading of language files
