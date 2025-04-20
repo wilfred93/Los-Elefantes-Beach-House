@@ -15,7 +15,10 @@
       <span class="mr-2">
         {{ currentLocaleName?.name }}
       </span>
-      <TriangleDownIcon class="w-3 h-3 mt-px" />
+      <TriangleDownIcon
+        class="w-3 h-3 mt-px"
+        :class="{ 'rotate-90': showDropdown }"
+      />
     </button>
     <div
       v-if="showDropdown"
@@ -85,3 +88,10 @@ onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
 });
 </script>
+
+<style scoped>
+.rotate-90 {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}
+</style>
