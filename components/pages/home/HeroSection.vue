@@ -66,10 +66,12 @@ onMounted(() => {
         Check Availability Now
       </button>
     </div>
-    <div class="absolute top-8 right-20 pl-8 md:pl-12">
+    <div class="absolute top-8 right-8 pl-8 md:pl-12">
       <LanguageSwitcher />
     </div>
-    <div class="absolute bottom-0 left-0 w-full md:pl-12 text-elefantes-yellow">
+    <div
+      class="absolute bottom-10 md:bottom-0 left-0 w-full md:pl-12 text-elefantes-yellow"
+    >
       <p
         class="montserrat-light text-center md:text-left"
         v-html="$t('arrow_claim')"
@@ -81,7 +83,7 @@ onMounted(() => {
       />
     </div>
     <div
-      class="absolute mt-12 top-0 md:top-auto md:bottom-0 right-0 mb-3.5 mr-8 md:mr-12 text-elefantes-yellow text-right z-10"
+      class="absolute hidden mt-12 top-0 md:top-auto md:bottom-0 md:block right-0 mb-3.5 mr-8 md:mr-12 text-elefantes-yellow text-right z-10"
     >
       <Temperature />
     </div>
