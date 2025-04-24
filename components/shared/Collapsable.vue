@@ -5,18 +5,8 @@
       class="w-full bg-elefantes-green p-3 hover:bg-[#013846] text-elefantes-orange rounded-t-md text-left font-bold text-xl"
       :class="{ 'rounded-b-md': !isOpen }"
     >
-      <img
-        v-if="!isOpen"
-        class="inline-block mb-1.5 mr-1.5"
-        src="/public/images/icons/layout/plus-icon.svg"
-        alt="See more"
-      />
-      <img
-        v-if="isOpen"
-        class="inline-block mb-1.5 mr-1.5"
-        src="/public/images/icons/layout/dash.svg"
-        alt="See more"
-      />
+      <PlusIcon v-if="!isOpen" class="inline-block mb-1.5 mr-1.5" />
+      <DashIcon v-if="isOpen" class="inline-block mb-1.5 mr-1.5" />
 
       {{ title }}
     </button>
@@ -27,6 +17,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+import PlusIcon from "@/public/images/icons/layout/plus-icon.svg";
+import DashIcon from "@/public/images/icons/layout/dash.svg";
+
 defineProps<{
   title: string;
 }>();
