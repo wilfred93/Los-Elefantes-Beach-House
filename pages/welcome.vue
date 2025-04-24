@@ -1,11 +1,6 @@
 <template>
   <div class="container mx-auto md:px-0 px-5 bg-elefantes-yellow">
-    <img
-      src="/public/images/LosElefantesLogo.svg"
-      class="mx-auto my-6 w-[222px]"
-      alt="Los Elefantes - Logo"
-    />
-    <div class="max-w-screen-lg mx-auto">
+    <div class="max-w-screen-lg mx-auto mt-10">
       <!-- Address Section -->
       <Collapsable :title="$t('address_title')">
         <p>{{ $t("address_intro") }}</p>

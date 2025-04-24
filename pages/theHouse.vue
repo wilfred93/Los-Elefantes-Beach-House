@@ -4,4 +4,13 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  headerTheme: "dark",
+});
+useHead({
+  bodyAttrs: {
+    class: "bg-elefantes-yellow",
+  },
+});
+</script>
