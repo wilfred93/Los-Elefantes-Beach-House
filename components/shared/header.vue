@@ -8,7 +8,7 @@
         <HamburgerMenu :theme="theme" :menu-position="menuPosition" />
       </div>
       <div class="flex flex-1 justify-center">
-        <LogoIcon class="scale-[0.8] md:scale-none" />
+        <LogoIcon class="scale-[0.8] md:scale-100" />
       </div>
       <div class="flex flex-1 justify-end">
         <LanguageSwitcher :theme="theme" />
@@ -29,6 +29,10 @@ defineProps({
   menuPosition: {
     type: String,
     default: "static",
+  },
+  showLanguageSwitcher: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>

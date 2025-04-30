@@ -12,7 +12,12 @@
       @click="onToggleDropdown"
     >
       <LanguageIcon class="mr-2 w-6 h-6" />
-      <span class="mr-2">
+      <span
+        class="mr-2"
+        :class="{
+          'hidden md:block': !showCurrentLanguage,
+        }"
+      >
         {{ currentLocaleName?.name }}
       </span>
       <TriangleDownIcon
@@ -22,10 +27,22 @@
     </button>
     <div
       v-if="showDropdown"
-      class="absolute py-2 ml-3 mt-10 w-32 bg-[#ffffff36] shadow-lg rounded-md"
+      class="absolute py-2 right-1 mt-10 w-32 shadow-lg rounded-md"
+      :class="{
+        'bg-elefantes-green text-elefantes-yellow border': theme === 'dark',
+        'bg-elefantes-yellow text-elefantes-green': theme === 'light',
+      }"
     >
       <ul>
-        <li class="px-4 py-1 hover:bg-elefantes-green cursor-pointer">
+        <li
+          class="px-4 py-1 hover:text-elefantes-yellow cursor-pointer"
+          :class="{
+            'hover:bg-elefantes-yellow hover:text-elefantes-green':
+              theme === 'dark',
+            'hover:bg-elefantes-green hover:text-elefantes-yellow':
+              theme === 'light',
+          }"
+        >
           <NuxtLink
             v-for="lang in dropDownLanguages"
             :key="lang.code"
@@ -48,6 +65,10 @@ defineProps({
   theme: {
     type: String,
     default: "light",
+  },
+  showCurrentLanguage: {
+    type: Boolean,
+    default: false,
   },
 });
 
