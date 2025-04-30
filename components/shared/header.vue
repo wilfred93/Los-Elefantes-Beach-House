@@ -8,7 +8,7 @@
         <HamburgerMenu :theme="theme" :menu-position="menuPosition" />
       </div>
       <div class="flex flex-1 justify-center">
-        <LogoIcon />
+        <LogoIcon class="scale-[0.8] md:scale-none" />
       </div>
       <div class="flex flex-1 justify-end">
         <LanguageSwitcher :theme="theme" />
