@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto md:px-0 px-5 bg-elefantes-yellow">
-    <div class="max-w-screen-lg mx-auto mt-10">
+    <div class="max-w-screen-lg mx-auto">
       <!-- Address Section -->
       <Collapsable :title="$t('address_title')">
         <p>{{ $t("address_intro") }}</p>

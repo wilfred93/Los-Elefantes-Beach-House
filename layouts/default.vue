@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header :theme="headerTheme" />
-    <main>
+    <main class="py-10 md:py-20">
       <slot />
     </main>
     <Footer />

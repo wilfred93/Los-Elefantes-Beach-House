@@ -1,6 +1,6 @@
 <template>
   <header class="relative h-screen">
-    <HamburgerMenu />
+    <HamburgerMenu :menu-position="'absolute'" />
     <picture class="absolute inset-0 w-full h-full z-0">
       <source
         srcset="/images/maspalomas-dunes-bg.jpg"

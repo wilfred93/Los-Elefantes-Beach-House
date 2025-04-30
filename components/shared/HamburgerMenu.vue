@@ -1,7 +1,10 @@
 <template>
   <button
     id="menuBtn"
-    class="absolute top-8 left-12 z-50 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+    class="top-8 left-12 z-50 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+    :class="{
+      'absolute top-8 left-12': menuPosition === 'absolute',
+    }"
   >
     <span
       :class="{
@@ -62,6 +65,10 @@ defineProps({
   theme: {
     type: String,
     default: "light",
+  },
+  menuPosition: {
+    type: String,
+    default: "static",
   },
 });
 

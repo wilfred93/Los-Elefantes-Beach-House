@@ -5,7 +5,7 @@
       aria-label="Global"
     >
       <div class="flex flex-1">
-        <HamburgerMenu :theme="theme" />
+        <HamburgerMenu :theme="theme" :menu-position="menuPosition" />
       </div>
       <div class="flex flex-1 justify-center">
         <LogoIcon />
@@ -25,6 +25,10 @@ defineProps({
   theme: {
     type: String,
     default: "light",
+  },
+  menuPosition: {
+    type: String,
+    default: "static",
   },
 });
 </script>
