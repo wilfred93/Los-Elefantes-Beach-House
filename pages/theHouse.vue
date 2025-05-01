@@ -11,18 +11,22 @@
         role="list"
         class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
       >
-        <li v-for="file in files" :key="file.source" class="relative">
+        <li v-for="file in files" :key="file.thumbnail" class="relative">
           <div
             class="group overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100"
           >
-            <img
-              :src="file.source"
-              alt=""
-              class="pointer-events-none aspect-[10/7] object-cover group-hover:opacity-75"
-            />
-            <button type="button" class="absolute inset-0 focus:outline-none">
-              <span class="sr-only">View details for {{ file.title }}</span>
-            </button>
+            <a
+              :href="file.original"
+              class="glightbox"
+              :data-gallery="'gallery1'"
+              :data-glightbox="file.title"
+            >
+              <img
+                :src="file.thumbnail"
+                alt=""
+                class="pointer-events-none aspect-[10/7] object-cover group-hover:opacity-75"
+              />
+            </a>
           </div>
         </li>
       </ul>
@@ -101,6 +105,9 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from "vue";
+const { $glightbox } = useNuxtApp();
+
 const statuses = {
   Paid: "text-green-700 bg-green-50 ring-green-600/20",
   Withdraw: "text-gray-600 bg-gray-50 ring-gray-500/10",
@@ -154,45 +161,51 @@ useHead({
 const files = [
   {
     title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
+    thumbnail:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
   },
   {
     title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
+    thumbnail:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
   },
   {
     title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
+    thumbnail:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
   },
   {
     title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
+    thumbnail:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
   },
   {
     title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
+    thumbnail:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
   },
   {
     title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
+    thumbnail:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
   },
   {
     title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
+    thumbnail:
       "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
+  },
+  {
+    title: "IMG_4985.HEIC",
+    thumbnail:
+      "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    original: "/images/apartment/house.jpg",
   },
 ];
 
@@ -254,4 +267,13 @@ const incentives = [
       "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-gift-card-light.svg",
   },
 ];
+
+onMounted(() => {
+  // @ts-ignore
+  $glightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
+  });
+});
 </script>
