@@ -37,12 +37,12 @@
       </h2>
       <div class="grid grid-cols-2 gap-y-12 gap-x-6 lg:grid-cols-4 lg:gap-x-8">
         <div v-for="incentive in incentives" :key="incentive.name">
-          <img :src="incentive.imageSrc" alt="" class="h-24 w-auto" />
+          <img :src="incentive.imageSrc" alt="" class="h-16 w-auto" />
           <h3 class="font-montserrat-semiBold mt-6 text-xl">
-            {{ incentive.name }}
+            {{ $t(incentive.name) }}
           </h3>
           <p class="mt-2 text-sm">
-            {{ incentive.description }}
+            {{ $t(incentive.description) }}
           </p>
         </div>
       </div>
@@ -57,47 +57,25 @@
       >
         <li
           v-for="client in clients"
-          :key="client.id"
-          class="overflow-hidden rounded-xl border border-gray-200"
+          class="overflow-hidden rounded-xl border border-elefantes-green"
         >
           <div
-            class="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6"
+            class="flex items-center gap-x-4 border-b bg-elefantes-green p-6"
           >
-            <img
-              :src="client.imageUrl"
-              :alt="client.name"
-              class="size-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
-            />
-            <div class="text-sm/6 font-medium text-gray-900">
+            <div
+              class="font-medium text-elefantes-orange font-montserrat-semiBold"
+            >
               {{ client.name }}
             </div>
+            <div class="ml-auto inline-block text-xl">
+              {{ client.icon }}
+            </div>
           </div>
-          <dl class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm/6">
-            <div class="flex justify-between gap-x-4 py-3">
-              <dt class="text-gray-500">Last invoice</dt>
-              <dd class="text-gray-700">
-                <time :datetime="client.lastInvoice.dateTime">{{
-                  client.lastInvoice.date
-                }}</time>
-              </dd>
-            </div>
-            <div class="flex justify-between gap-x-4 py-3">
-              <dt class="text-gray-500">Amount</dt>
-              <dd class="flex items-start gap-x-2">
-                <div class="font-medium text-gray-900">
-                  {{ client.lastInvoice.amount }}
-                </div>
-                <div
-                  :class="[
-                    statuses[client.lastInvoice.status],
-                    'rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset',
-                  ]"
-                >
-                  {{ client.lastInvoice.status }}
-                </div>
-              </dd>
-            </div>
-          </dl>
+          <ul class="p-6">
+            <li class="py-2 bottom-1" v-for="item in client.items" :key="item">
+              {{ item }}
+            </li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -115,38 +93,55 @@ const statuses = {
 };
 const clients = [
   {
-    id: 1,
-    name: "Tuple",
-    imageUrl: "https://tailwindcss.com/plus-assets/img/logos/48x48/tuple.svg",
-    lastInvoice: {
-      date: "December 13, 2022",
-      dateTime: "2022-12-13",
-      amount: "$2,000.00",
-      status: "Overdue",
-    },
+    name: "Sleeping ",
+    icon: "🛏️",
+    items: [
+      "Double bed",
+      "Air conditioning",
+      "Smart TV",
+      "Board games",
+      "Welcome pack",
+      "Local guide",
+      "Safety box",
+    ],
   },
   {
-    id: 2,
-    name: "SavvyCal",
-    imageUrl:
-      "https://tailwindcss.com/plus-assets/img/logos/48x48/savvycal.svg",
-    lastInvoice: {
-      date: "January 22, 2023",
-      dateTime: "2023-01-22",
-      amount: "$14,000.00",
-      status: "Paid",
-    },
+    name: "Sleeping",
+    icon: "🛏️",
+    items: [
+      "Double bed",
+      "Air conditioning",
+      "Smart TV",
+      "Board games",
+      "Welcome pack",
+      "Local guide",
+      "Safety box",
+    ],
   },
   {
-    id: 3,
-    name: "Reform",
-    imageUrl: "https://tailwindcss.com/plus-assets/img/logos/48x48/reform.svg",
-    lastInvoice: {
-      date: "January 23, 2023",
-      dateTime: "2023-01-23",
-      amount: "$7,600.00",
-      status: "Paid",
-    },
+    name: "Sleeping",
+    icon: "🛏️",
+    items: [
+      "Double bed",
+      "Air conditioning",
+      "Smart TV",
+      "Board games",
+      "Welcome pack",
+      "Local guide",
+      "Safety box",
+    ],
+  },
+  {
+    name: "Sleeping",
+    items: [
+      "Double bed",
+      "Air conditioning",
+      "Smart TV",
+      "Board games",
+      "Welcome pack",
+      "Local guide",
+      "Safety box",
+    ],
   },
 ];
 definePageMeta({
@@ -211,60 +206,44 @@ const files = [
 
 const incentives = [
   {
-    name: "Self Check-In",
-    description:
-      "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-delivery-light.svg",
+    name: "self_check_in_title",
+    description: "self_check_in_description",
+    imageSrc: "/images/icons/the-house/clock-elefantes.png",
   },
   {
-    name: "High Speed Internet",
-    description:
-      "Our AI chat widget is powered by a naive series of if/else statements. Guaranteed to irritate.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-chat-light.svg",
+    name: "high_speed_internet_title",
+    description: "high_speed_internet_description",
+    imageSrc: "/images/icons/the-house/wifi-elefantes.png",
   },
   {
-    name: "Air Conditioning",
-    description:
-      "Buy them for your friends, especially if they don't like our store. Free money for us, it's great.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-gift-card-light.svg",
+    name: "air_conditioning_title",
+    description: "air_conditioning_description",
+    imageSrc: "/images/icons/the-house/ac-elefantes.png",
   },
   {
-    name: "Welcome Pack",
-    description:
-      "Look how fast that cart is going. What does this mean for the actual experience? I don't know.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-fast-checkout-light.svg",
+    name: "welcome_pack_title",
+    description: "welcome_pack_description",
+    imageSrc: "/images/icons/the-house/welcome-pack-elefantes.png",
   },
   {
-    name: "Local Guide",
-    description:
-      "Buy them for your friends, especially if they don't like our store. Free money for us, it's great.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-gift-card-light.svg",
+    name: "local_guide_title",
+    description: "local_guide_description",
+    imageSrc: "/images/icons/the-house/guide-elefantes.png",
   },
   {
-    name: "Safety Box",
-    description:
-      "Buy them for your friends, especially if they don't like our store. Free money for us, it's great.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-gift-card-light.svg",
+    name: "safety_box_title",
+    description: "safety_box_description",
+    imageSrc: "/images/icons/the-house/safety-box-elefantes.png",
   },
   {
-    name: "Smart TV",
-    description:
-      "Buy them for your friends, especially if they don't like our store. Free money for us, it's great.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-gift-card-light.svg",
+    name: "smart_tv_title",
+    description: "smart_tv_description",
+    imageSrc: "/images/icons/the-house/TV-elefantes.png",
   },
   {
-    name: "Board Games",
-    description:
-      "Buy them for your friends, especially if they don't like our store. Free money for us, it's great.",
-    imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-gift-card-light.svg",
+    name: "board_games_title",
+    description: "board_games_description",
+    imageSrc: "/images/icons/the-house/chess-elefantes.png",
   },
 ];
 
