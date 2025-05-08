@@ -86,6 +86,15 @@
 import { onMounted } from "vue";
 const { $glightbox } = useNuxtApp();
 
+definePageMeta({
+  headerTheme: "dark",
+});
+useHead({
+  bodyAttrs: {
+    class: "bg-elefantes-yellow",
+  },
+});
+
 const statuses = {
   Paid: "text-green-700 bg-green-50 ring-green-600/20",
   Withdraw: "text-gray-600 bg-gray-50 ring-gray-500/10",
@@ -144,14 +153,6 @@ const clients = [
     ],
   },
 ];
-definePageMeta({
-  headerTheme: "dark",
-});
-useHead({
-  bodyAttrs: {
-    class: "bg-elefantes-yellow",
-  },
-});
 
 const files = [
   {
