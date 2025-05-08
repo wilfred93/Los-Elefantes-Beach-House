@@ -35,7 +35,7 @@
     >
       <ul>
         <li
-          class="px-4 py-1 hover:text-elefantes-yellow cursor-pointer"
+          class="px-4 py-1 cursor-pointer"
           :class="{
             'hover:bg-elefantes-yellow hover:text-elefantes-green':
               theme === 'dark',
