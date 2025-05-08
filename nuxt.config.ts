@@ -68,6 +68,18 @@ export default defineNuxtConfig({
         en: "/the-house/",
         es: "/la-casa/",
       },
+      legalNotice: {
+        en: "/legal-notice/",
+        es: "/aviso-legal/",
+      },
+      privacyPolicy: {
+        en: "/privacy-policy/",
+        es: "/politica-de-privacidad/",
+      },
+      bookingPolicy: {
+        en: "/booking-policy/",
+        es: "/politica-de-reservas/",
+      },
     },
     defaultLocale: "en",
     lazy: true, // Enables lazy loading of language files

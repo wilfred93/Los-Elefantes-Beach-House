@@ -7,16 +7,26 @@
             <div
               class="col-span-12 md:col-span-1 py-5 h-full flex md:flex-col justify-center items-center gap-5"
             >
-              <img
-                class="max-w-[40%] md:max-w-[60%]"
-                src="/public/images/booking-logo.png"
-                alt="Los Elefantes Beach House - Booking Logo"
-              />
-              <img
-                class="max-w-[30%] md:max-w-[40%]"
-                src="/public/images/airbnb-logo.png"
-                alt="Los Elefantes Beach House - Airbnb Logo"
-              />
+              <a
+                class="block max-w-[40%] md:max-w-[60%]"
+                href="https://www.booking.com/hotel/es/modern-aparment-2-min-from-the-beach.es.html"
+                target="_blank"
+              >
+                <img
+                  src="/public/images/booking-logo.png"
+                  alt="Los Elefantes Beach House - Booking Logo"
+                />
+              </a>
+              <a
+                class="block max-w-[30%] md:max-w-[40%]"
+                href="https://www.airbnb.ie/rooms/13412930"
+                target="_blank"
+              >
+                <img
+                  src="/public/images/airbnb-logo.png"
+                  alt="Los Elefantes Beach House - Airbnb Logo"
+                />
+              </a>
             </div>
             <div
               v-for="(menu, index) in footerMenus"
@@ -58,13 +68,13 @@ const localePath = useLocalePath();
 const footerMenus = [
   [
     { page: "theHouse", slugKey: "slug_theHouse" },
-    { page: "bookings", slugKey: "slug_bookings" },
+    { page: "reservation", slugKey: "slug_bookings" },
     { page: "contact", slugKey: "slug_contact" },
   ],
   [
-    { page: "legalNotice", slugKey: "slug_legalNotice" },
-    { page: "privacyPolicy", slugKey: "slug_privacyPolicy" },
-    { page: "bookingPolicy", slugKey: "slug_bookingPolicy" },
+    { page: "legalNotice", slugKey: "slug_legal_notice" },
+    { page: "privacyPolicy", slugKey: "slug_privacy_policy" },
+    { page: "bookingPolicy", slugKey: "slug_booking_policy" },
   ],
 ];
 </script>

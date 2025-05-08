@@ -3,5 +3,9 @@
   "slug_welcome": "Bienvenido",
   "slug_contact": "Contacto",
   "slug_reservation": "Reservas",
-  "slug_theHouse": "La Casa"
+  "slug_theHouse": "La Casa",
+  "slug_bookings": "Bookings",
+  "slug_legal_notice": "Legal Notice",
+  "slug_privacy_policy": "Privacy Policy",
+  "slug_booking_policy": "Booking Policy"
 }
