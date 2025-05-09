@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header :theme="headerTheme" />
-    <main class="py-6 md:py-15">
+    <main :class="mainClass">
       <slot />
     </main>
     <Footer />
@@ -17,4 +17,5 @@ import { computed } from "vue";
 const route = useRoute();
 
 const headerTheme = computed(() => route.meta.headerTheme || "light");
+const mainClass = computed(() => route.meta.mainClass || "py-6 md:py-15");
 </script>
