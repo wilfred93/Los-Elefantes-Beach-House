@@ -50,39 +50,8 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
 import LanguageSwitcher from "@/components/shared/LanguageSwitcher.vue";
 import Button from "@/components/shared/Button.vue";
 import Temperature from "~/components/pages/home/Temperature.vue";
 import HamburgerMenu from "~/components/shared/HamburgerMenu.vue";
-
-onMounted(() => {
-  const menuBtn = document.getElementById("menuBtn");
-  const menuOverlay = document.getElementById("menuOverlay");
-  menuOverlay.classList.remove("!transition-none");
-  let isMenuOpen = false;
-  menuBtn.addEventListener("click", () => {
-    isMenuOpen = !isMenuOpen;
-
-    // Toggle menu overlay
-    menuOverlay.style.transform = isMenuOpen
-      ? "translateX(0)"
-      : "translateX(-100%)";
-
-    // Animate hamburger to X
-    const spans = menuBtn.getElementsByTagName("span");
-    if (isMenuOpen) {
-      spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
-      spans[1].style.opacity = "0";
-      spans[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
-    } else {
-      spans[0].style.transform = "none";
-      spans[1].style.opacity = "1";
-      spans[2].style.transform = "none";
-    }
-
-    // Prevent body scrolling when menu is open
-    document.body.style.overflow = isMenuOpen ? "hidden" : "";
-  });
-});
 </script>

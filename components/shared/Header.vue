@@ -5,7 +5,11 @@
       aria-label="Global"
     >
       <div class="flex flex-1">
-        <HamburgerMenu :theme="theme" :menu-position="menuPosition" />
+        <HamburgerMenu
+          :key="route.path"
+          :theme="theme"
+          :menu-position="menuPosition"
+        />
       </div>
       <div class="flex flex-1 justify-center">
         <LogoIcon class="scale-[0.8] md:scale-100" />
@@ -21,6 +25,8 @@
 import HamburgerMenu from "@/components/shared/HamburgerMenu.vue";
 import LanguageSwitcher from "@/components/shared/LanguageSwitcher.vue";
 import LogoIcon from "@/public/images/icons/layout/elefantes-logo-letters.svg";
+const route = useRoute();
+
 defineProps({
   theme: {
     type: String,

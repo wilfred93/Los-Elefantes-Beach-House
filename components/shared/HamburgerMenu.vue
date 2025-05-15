@@ -56,10 +56,9 @@
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 
+const localePath = useLocalePath();
 const route = useRoute();
-
-console.log("=======");
-console.log(route.path);
+const isMenuOpen = ref(false);
 
 defineProps({
   theme: {
@@ -72,9 +71,8 @@ defineProps({
   },
 });
 
-const isMenuOpen = ref(false);
-
 onMounted(() => {
+  document.body.style.overflow = "auto";
   const menuBtn = document.getElementById("menuBtn");
   const menuOverlay = document.getElementById("menuOverlay");
   menuOverlay.classList.remove("!transition-none");
@@ -104,7 +102,6 @@ onMounted(() => {
   });
 });
 
-const localePath = useLocalePath();
 const navigationItems = [
   { page: "index", slugKey: "slug_home" },
   { page: "theHouse", slugKey: "slug_theHouse" },
