@@ -26,7 +26,7 @@
       <Button>Check Availability</Button>
     </div>
     <div class="absolute top-8 right-8 pl-8 md:pl-12">
-      <LanguageSwitcher show-current-language="true" />
+      <LanguageSwitcher :show-current-language="true" />
     </div>
     <div
       class="absolute bottom-10 md:bottom-0 left-0 w-full md:pl-12 text-elefantes-yellow"
