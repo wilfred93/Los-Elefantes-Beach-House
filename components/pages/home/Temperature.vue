@@ -2,7 +2,7 @@
   <div id="temperature-wrapper" class="text-right overflow-hidden">
     <p class="text-4xl font-bold mb-1">{{ temperature }} °C</p>
     <p class="text-lg">Maspalomas</p>
-    <p class="text-sm update-info">
+    <p class="text-sm update-info" v-if="weatherCode">
       Last Updated: {{ lastUpdated }} | Conditions:
       {{ $t("weather_" + weatherCode) }}
     </p>
