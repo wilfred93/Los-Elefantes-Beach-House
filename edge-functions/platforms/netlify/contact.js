@@ -7,7 +7,9 @@ export default async (request) => {
   const expectedToken = `Bearer ${Deno.env.get("EDGE_FUNCTION_SECRET")}`;
 
   if (authHeader !== expectedToken) {
-    console.log("Auth correct");
+    console.log("Auth incorrect");
+    console.log(authHeader);
+    console.log(expectedToken);
     return new Response("Unauthorized", { status: 401 });
   }
   return await handleContactForm(request);
