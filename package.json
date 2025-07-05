@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@netlify/functions": "^4.1.9",
     "@nuxtjs/i18n": "^9.3.4",
     "animejs": "^3.2.2",
     "axios": "^1.10.0",
