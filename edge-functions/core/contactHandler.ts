@@ -1,7 +1,7 @@
-// Type declaration for Node.js runtime in Netlify Serverless Functions
-declare const process: {
+// Type declaration for Deno runtime in Netlify Edge Functions
+declare const Deno: {
   env: {
-    [key: string]: string | undefined;
+    get(key: string): string | undefined;
   };
 };
 
@@ -15,7 +15,7 @@ export async function handleContactForm(request: Request): Promise<Response> {
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      Authorization: `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({

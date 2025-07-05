@@ -1,2 +1,2 @@
 [build]
-  functions = "serverless/platforms/netlify"
+  edge_functions = "edge-functions/platforms/netlify"
