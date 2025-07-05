@@ -106,6 +106,7 @@ const inputEmail = ref("alfredo@gmail.com");
 const inputMessage = ref("Hello, I'm interested in your services");
 
 const onSubmitContactForm = async () => {
+  console.log("onSubmitContactForm");
   const response = await sendContactMessage({
     name: inputName.value,
     email: inputEmail.value,
